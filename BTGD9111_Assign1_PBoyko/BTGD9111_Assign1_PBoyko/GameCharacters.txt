@@ -1,0 +1,10 @@
+Archer R 60
+Barbarian M 40
+Wizard R 95
+Orc M 75
+King M 100
+Crossbow R 67
+Crossbow R 67
+Paul R 200
+Paul R 200
+Paul R 200
