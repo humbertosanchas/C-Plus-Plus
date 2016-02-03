@@ -24,13 +24,12 @@ class ShipType
 		int GetDefenseSheild() { return defense; }
 		void SetDefenseSheild(int& sheild){	this->defense = sheild; }
 		int GetHitPoints() { return hitPoints; }
-		void SetHitPoints(int& hp) { (hp < MAX_HIT_POINTS ? hitPoints = hp : hitPoints = MAX_HIT_POINTS); }
-		
+		void SetHitPoints(int hp) { (hp < MAX_HIT_POINTS ? hitPoints = hp : hitPoints = MAX_HIT_POINTS); }
+		bool IsAlive();
+		void TakeDamage(int& shieldHitValue);
+		void SetTextColour();
 
-		
-
-
-
-	
-
+		ShipType();
+		ShipType(string name, int attack, int defense, int hitPoints);
+		~ShipType();
 };
