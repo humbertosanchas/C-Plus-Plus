@@ -1,11 +1,15 @@
+#pragma once
 #include <string>
 
 using namespace std;
+//--------------------------------------------------------------
+// Define your ship type class in this header file
 
 static const int MAX_HIT_POINTS = 100;
 
 class ShipType
 {
+	//Data and function members go here
 	private:
 		string name;
 		int attack;
