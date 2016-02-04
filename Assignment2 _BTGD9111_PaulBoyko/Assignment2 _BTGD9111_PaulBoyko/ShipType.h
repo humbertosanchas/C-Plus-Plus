@@ -26,8 +26,9 @@ class ShipType
 		int GetHitPoints() { return hitPoints; }
 		void SetHitPoints(int hp) { (hp < MAX_HIT_POINTS ? hitPoints = hp : hitPoints = MAX_HIT_POINTS); }
 		bool IsAlive();
-		void TakeDamage(int& shieldHitValue);
+		void TakeDamage(ShipType enemyShip);
 		void SetTextColour();
+		void AttackShip(ShipType& enemyShip , ShipType thisShip);
 
 		ShipType();
 		ShipType(string name, int attack, int defense, int hitPoints);
