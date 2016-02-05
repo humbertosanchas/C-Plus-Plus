@@ -2,6 +2,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <iomanip>
+#include <mmsystem.h>
 #include "ShipType.h"
 
 //--------------------------------------------------------------
@@ -21,25 +22,28 @@ bool ShipType::IsAlive() //checks if ship is alive and return true if is else fa
 
 void ShipType::TakeDamage(ShipType enemyShip) // damages sheild or ship depending on which is appropiate
 {
+	int damageTaken;
 	if (defense > DEAD_AND_GONE)
 	{
-		int damageTaken = rand() % ((enemyShip.attack / WARNING_SHIELD_MODIFIER) + 1); // rand damage between 0 and half otherships attack
+		damageTaken = rand() % ((enemyShip.attack / WARNING_SHIELD_MODIFIER) + 1); // rand damage between 0 and half otherships attack
 		this->defense = defense - damageTaken;
 		if (defense < DEAD_AND_GONE)
 		{
-			this->hitPoints = this->hitPoints - this->defense;
+			this->hitPoints = this->hitPoints + this->defense;
 			this->defense = DEAD_AND_GONE;
 		}
 	}
 	else
 	{
-		int damageTaken = rand() % (enemyShip.attack + 1); // rand damage between 0 and otherships attack
+		damageTaken = rand() % (enemyShip.attack + 1); // rand damage between 0 and otherships attack
 		this->hitPoints = hitPoints - damageTaken;
 		if (hitPoints < DEAD_AND_GONE)
 		{
 			hitPoints = DEAD_AND_GONE;
 		}
 	}
+	PlaySound(TEXT("Laser.wav"), NULL, SND_SYNC);
+
 }
 
 void ShipType::AttackShip(ShipType& enemyShip, ShipType thisShip) //call by one ship to attack the other

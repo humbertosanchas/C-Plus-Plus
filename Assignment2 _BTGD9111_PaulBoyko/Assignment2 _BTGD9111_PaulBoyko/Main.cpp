@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <windows.h>
+
 #include "ShipType.h"
 #include "main.h"
 using namespace std;
@@ -12,6 +13,7 @@ int main()
 	//instantiate 2 ships with values
 	ShipType ship1("Enterprise", 10, 100);
 	ShipType ship2("Star Destroyer", 20, 100);
+	int numberOfShips = 2;
 
 	BattleIntro(ship1, ship2); //show intro method
 	Battle(ship1, ship2); // start the battle	
@@ -40,16 +42,20 @@ void BattleReport(ShipType ship1, ShipType ship2) // shows the winner if there i
 	{
 		cout << "The Battle has ended \nThe Victor was... \n\n";
 		Display(ship1);
+		PlaySound(TEXT("Winner.wav"), NULL, SND_SYNC);
 	}
 	else if (ship2.IsAlive())
-	{
+	{		
 		cout << "The Battle has ended \nThe Victor was ... \n\n";
 		Display(ship2);
+		PlaySound(TEXT("Winner.wav"), NULL, SND_SYNC);
 	}
 	else
 	{
+		cout << "The Battle has ended\n";
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);
 		cout << "\n*** MUTUAL DESTRUCTION ***\n";
+		PlaySound(TEXT("BothDead.wav"), NULL, SND_SYNC);
 	}
 	cout << endl;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); //make sure text is white
@@ -76,7 +82,6 @@ void Battle(ShipType ship1, ShipType ship2) //loops while ships are alive call t
 		cout << "Round " << c << ".....\n\n";
 		ShipBattle(ship1, ship2);		
 		Sleep(1000);
-		cout << '\a';
 		c++;
 		system("CLS");
 	}		

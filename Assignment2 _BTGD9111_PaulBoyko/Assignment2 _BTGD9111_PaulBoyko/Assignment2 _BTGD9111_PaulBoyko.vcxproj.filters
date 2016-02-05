@@ -30,4 +30,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Laser.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Winner.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="BothDead.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
 </Project>
