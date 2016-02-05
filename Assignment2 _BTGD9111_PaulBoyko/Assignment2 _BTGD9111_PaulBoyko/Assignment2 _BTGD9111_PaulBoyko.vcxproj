@@ -68,6 +68,7 @@
     <ClCompile Include="ShipType.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Downloads\StartSolution\Assign2\main.h" />
     <ClInclude Include="ShipType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -26,5 +26,8 @@
     <ClInclude Include="ShipType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\StartSolution\Assign2\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
