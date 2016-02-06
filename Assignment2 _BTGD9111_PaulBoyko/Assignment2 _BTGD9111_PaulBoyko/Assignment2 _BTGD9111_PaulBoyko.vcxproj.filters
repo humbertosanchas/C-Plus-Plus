@@ -40,5 +40,8 @@
     <Media Include="BothDead.wav">
       <Filter>Resource Files</Filter>
     </Media>
+    <Media Include="RedAlert.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

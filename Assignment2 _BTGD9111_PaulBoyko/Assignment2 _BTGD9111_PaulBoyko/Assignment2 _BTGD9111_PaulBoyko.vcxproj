@@ -75,6 +75,7 @@
   <ItemGroup>
     <Media Include="BothDead.wav" />
     <Media Include="Laser.wav" />
+    <Media Include="RedAlert.wav" />
     <Media Include="Winner.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -23,6 +23,7 @@ int main()
 
 void BattleIntro(ShipType ship1, ShipType ship2) //shows user what is going on and starting values of both ships
 {
+	PlaySound(TEXT("RedAlert.wav"), NULL, SND_ASYNC);
 	cout << "***------------------------ ENEMY SIGHTED, RAISE SHEILDS AND PREPARE FOR BATTLE ------------------------***\n\n";
 	Display(ship1);
 	cout << endl;
