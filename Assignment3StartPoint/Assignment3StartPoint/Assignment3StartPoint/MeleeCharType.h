@@ -3,16 +3,11 @@
 #include <string>
 #include "CharType.h"
 
-#define SWORD "Sword"
-#define MACE "Mace"
-#define SPEAR "Spear"
-#define CLUB "Club"
-
 
 using namespace std;
 
 
-class MeleeCharType : CharType
+class MeleeCharType : public CharType
 {
 	public: enum weapon { SWORD, MACE, SPEAR, CLUB };
 
@@ -34,7 +29,7 @@ class MeleeCharType : CharType
 
 		MeleeCharType() : CharType()
 		{
-			this->wep = Sword;
+			this->wep = SWORD;
 			this->comboLvl = 0;
 			this->numberOfKills = 0;
 		}

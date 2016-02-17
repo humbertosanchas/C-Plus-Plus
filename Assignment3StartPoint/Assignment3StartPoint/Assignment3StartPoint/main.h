@@ -4,8 +4,8 @@
 
 // Uncomment prototypes below as you develop the derived classes
 //--------------------------------------------------------
-//void DisplayCharacterInformation(WizardCharType wizardChar, MeleeCharType meleeChar, string title);
-void DisplayCharacterInformation(MeleeCharType meleeChar, string title);
+void DisplayCharacterInformation(WizardCharType wizardChar, MeleeCharType meleeChar, string title);
+//void DisplayCharacterInformation(MeleeCharType meleeChar, string title);
 //void TestWizardClass(WizardCharType& wizard);
 //void TestMeleeClass(MeleeCharType& melee);
 

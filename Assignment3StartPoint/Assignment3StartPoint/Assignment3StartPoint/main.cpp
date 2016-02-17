@@ -14,12 +14,13 @@ void main()
 
 	system("pause");
 		
-  //WizardCharType wizardChar("Zara", 1, 30, WizardCharType::ORBS);		// Use parameterized constructors to initialize objects
+  WizardCharType wizardChar("Zara", 1, 30, WizardCharType::WAND);		// Use parameterized constructors to initialize objects
   MeleeCharType meleeChar("Kai", 1, 3, MeleeCharType::SWORD);
  
   //// Display Initialized Character Data
   //DisplayCharacterInformation(wizardChar, meleeChar, "Intial Character Data: ");    
-  DisplayCharacterInformation(meleeChar, "Intial Character Data: ");    
+  DisplayCharacterInformation(wizardChar, meleeChar, "Intial Character Data: ");      
+
 
   //// Testing derived class
   //TestWizardClass(wizardChar);  
@@ -108,26 +109,26 @@ void main()
 //------------------------------------------------------------------------------
 // Display Character Data
 //------------------------------------------------------------------------------
-//void DisplayCharacterInformation(WizardCharType wizardChar, MeleeCharType meleeChar, string title)
-//{
-//  cout << title << endl;
-//
-//  cout << endl;
-//  wizardChar.Display();
-//  cout << endl;
-//
-//  meleeChar.Display();
-//  system("pause");
-//  system("cls");
-//}
-
-void DisplayCharacterInformation(MeleeCharType meleeChar, string title)
+void DisplayCharacterInformation(WizardCharType wizardChar, MeleeCharType meleeChar, string title)
 {
   cout << title << endl;
 
+  cout << endl;
+  wizardChar.Display();
   cout << endl;
 
   meleeChar.Display();
   system("pause");
   system("cls");
 }
+
+//void DisplayCharacterInformation(MeleeCharType meleeChar, string title)
+//{
+//  cout << title << endl;
+//
+//  cout << endl;
+//
+//  meleeChar.Display();  
+//  system("pause");
+//  system("cls");
+//}
