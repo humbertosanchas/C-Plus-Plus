@@ -9,17 +9,18 @@ using namespace std;
 class WizardCharType : public CharType
 {
 
-	public: enum weapon { STAFF, WAND, BOOK, CRYSTAL };
+	public: enum Weapon { STAFF, WAND, BOOK, CRYSTAL };
 
 	private:
-		weapon wep;
-		int magic;
+		Weapon wep;
 		int magicHealth;
 		int totalMagicDamage;
+		int static const MAX_WEAPONS = 4;
+		string static weaponString[MAX_WEAPONS];
 
 	public:
-		void SetMagic(int inMagic) { magic = inMagic; }
-		int GetMagic() { return magic; }
+		void SetWeapon(Weapon w) { this->wep = w; }	
+		Weapon GetWeapon() { return wep; }
 		void SetHealth(int inMagicHealth) { magicHealth = inMagicHealth; }
 		int GetHealth() { return magicHealth; }
 		void SetTotalMagicDamage(int inTotalMagicDamage) { totalMagicDamage = inTotalMagicDamage; }
@@ -29,17 +30,15 @@ class WizardCharType : public CharType
 
 		WizardCharType() : CharType()
 		{
-			wep = WAND;
-			magic = 0;
+			wep = WizardCharType::WAND;
 			magicHealth = 0;
 			totalMagicDamage = 0;
 		}
 
-		WizardCharType(string name, int level, int inMagic, weapon inWep ) : CharType(name, level)
+		WizardCharType(string name, int level, int inMagicHealth, Weapon inWep ) : CharType(name, level)
 		{
 			wep = inWep;
-			magic = inMagic;
-			magicHealth = 0;
+			magicHealth = inMagicHealth;
 			totalMagicDamage = 0;
 		}
 

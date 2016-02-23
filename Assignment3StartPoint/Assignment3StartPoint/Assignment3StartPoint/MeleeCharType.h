@@ -15,6 +15,8 @@ class MeleeCharType : public CharType
 		weapon wep;
 		int comboLvl;
 		int numberOfKills;
+		int static const MAX_WEAPONS = 4;
+		string static weaponString[MAX_WEAPONS];
 
 	public:		
 		weapon GetWeapon() { return this->wep; }
@@ -23,7 +25,7 @@ class MeleeCharType : public CharType
 
 		void SetWeapon(weapon w) { this->wep = w; }
 		void SetComboLvl(int cLvl) { this->comboLvl = cLvl; }
-		void SetNumberOfKills(int nKills) { this->numberOfKills = nKills; }
+		void SetNumOfKills(int nKills) { this->numberOfKills = nKills; }
 
 		void Display();
 

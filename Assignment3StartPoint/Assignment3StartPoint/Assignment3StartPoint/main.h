@@ -5,9 +5,9 @@
 // Uncomment prototypes below as you develop the derived classes
 //--------------------------------------------------------
 void DisplayCharacterInformation(WizardCharType wizardChar, MeleeCharType meleeChar, string title);
-//void DisplayCharacterInformation(MeleeCharType meleeChar, string title);
-//void TestWizardClass(WizardCharType& wizard);
-//void TestMeleeClass(MeleeCharType& melee);
+void DisplayCharacterInformation(MeleeCharType meleeChar, string title);
+void TestWizardClass(WizardCharType& wizard);
+void TestMeleeClass(MeleeCharType& melee);
 
 //WIZARD TEST CONSTANTS
 const int WIZARD_SUCCESSFUL_CASTS = 6;

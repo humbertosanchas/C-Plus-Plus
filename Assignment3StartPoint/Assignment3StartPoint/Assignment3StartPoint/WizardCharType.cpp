@@ -4,10 +4,12 @@
 
 using namespace std;
 
+string WizardCharType::weaponString[MAX_WEAPONS] = { "Staff", "Wand", "Book", "Crystal" };
+
 // implementation methods for the Wizard class go here
 void WizardCharType::Display()
 {
 	CharType::Display();
-	cout << "Magic : " << magic << endl << "Magic Health : " << magicHealth << endl << "Total Magic Damage : " << totalMagicDamage << endl;
+	cout << "Weapon : " << WizardCharType::weaponString[wep] << endl << "Magic Health : " << magicHealth << endl << "Total Magic Damage : " << totalMagicDamage << endl << endl;
 }
 
