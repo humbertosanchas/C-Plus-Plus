@@ -120,13 +120,15 @@ void DisplayCharacterInformation(WizardCharType wizardChar, MeleeCharType meleeC
   system("cls");
 }
 
-void DisplayCharacterInformation(MeleeCharType meleeChar, string title)
-{
-  cout << title << endl;
+//Created to test the melee class proir to creating Wizard class
 
-  cout << endl;
-
-  meleeChar.Display();  
-  system("pause");
-  system("cls");
-}
+//void DisplayCharacterInformation(MeleeCharType meleeChar, string title)
+//{
+//  cout << title << endl;
+//
+//  cout << endl;
+//
+//  meleeChar.Display();  
+//  system("pause");
+//  system("cls");
+//}

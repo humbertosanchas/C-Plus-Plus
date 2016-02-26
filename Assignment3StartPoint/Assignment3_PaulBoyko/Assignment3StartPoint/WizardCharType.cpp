@@ -3,7 +3,8 @@
 #include "WizardCharType.h"
 
 using namespace std;
-
+//Paul Boyko Feb 2016
+//array to hold the strin values of the available weapons
 string WizardCharType::weaponString[MAX_WEAPONS] = { "Staff", "Wand", "Book", "Crystal" };
 
 // implementation methods for the Wizard class go here

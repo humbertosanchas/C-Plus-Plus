@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Paul Boyko Feb 2016
+//array to hold string value of wepon types available
 string MeleeCharType::weaponString[MAX_WEAPONS] = { "Sword", "Mace", "Spear", "Club" };
 
 // implementation methods for the Melee class go here
