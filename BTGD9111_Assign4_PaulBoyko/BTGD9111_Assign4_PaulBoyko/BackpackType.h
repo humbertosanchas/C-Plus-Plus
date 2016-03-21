@@ -7,15 +7,21 @@ using namespace std;
 
 class BackpackType
 {
+	public:
+		enum backpackItems { NOTHING, GIN, TONIC, LIME, CUP, FOOD };
+
 	private:
-		//enum for item
-		string currentItem;
+		
+		backpackItems currentItem;
 		int maxWeight;
+		int static const MAX_ITEMS = 6;
+		string static backpackItemsString[MAX_ITEMS];
 
 	public:
-		//setter and getters
-		void SetCurrentItem(string item) { currentItem = item; }
-		string GetCurrentItem() { return currentItem; }
+		
+		//setter and getters		
+		void SetCurrentItem(backpackItems item) { currentItem = item; }
+		backpackItems GetCurrentItem() { return currentItem; }
 		void SetMaxWeight(int weight) { maxWeight = weight; }
 		int GetMaxWeight() { return maxWeight; }
 
@@ -24,7 +30,7 @@ class BackpackType
 
 		//default and parameterized constructors
 		BackpackType();
-		BackpackType( /*enum for item,*/ string item, int weight);
+		BackpackType(backpackItems item, int weight);
 
 		//default destructor
 		~BackpackType();

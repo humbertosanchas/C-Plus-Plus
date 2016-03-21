@@ -69,7 +69,10 @@
     <ClInclude Include="SoldierType.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BackpackType.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PersonType.cpp" />
+    <ClCompile Include="Soldier.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "BackpackType.h"
 
 using namespace std;
 //main.cpp file
@@ -7,6 +8,10 @@ using namespace std;
 
 int main()
 {
+	
+	BackpackType backpack;
+	backpack.DisplayBackPack();
+
 	system("PAUSE");
 	return 0;
 }
