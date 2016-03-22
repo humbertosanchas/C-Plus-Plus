@@ -3,7 +3,7 @@
 
 using namespace std;
 //Header class for the PersonType class
-//Paul Boyko March 9th 2015
+//Paul Boyko March 2015
 
 class PersonType
 {
@@ -17,7 +17,11 @@ class PersonType
 		 //getters and setters
 		void SetPersonName(string name) { personName = name; }
 		string GetPersonName() { return personName; }
-		void SetPersonGender(char gender) { personGender = gender; }
+
+		//written in cpp to allow limit imput vaule to M or F
+		void SetPersonGender(char gender);
+		
+		//rest of the inline getters and setter
 		char GetPersonGender() { return personGender; }
 		void SetPersonHeight(double height) { personHeight = height; }
 		double GetPersonHeight() { return personHeight; }
