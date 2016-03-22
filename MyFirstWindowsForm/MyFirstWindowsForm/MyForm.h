@@ -174,7 +174,6 @@ namespace MyFirstWindowsForm {
 			this->Controls->Add(this->btnAdd);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
-			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -185,11 +184,9 @@ namespace MyFirstWindowsForm {
 private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  e)
 {
 	int answer = (int::Parse(txtNum1->Text) + int::Parse(txtNum2->Text));
-	lblAnswerResult->Text = answer.ToString();
-}
-private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
-{
-}
+	lblAnswerResult->Text = answer.ToString();	
+}		 
+
 private: System::Void btnClear_Click(System::Object^  sender, System::EventArgs^  e) 
 {
 	txtNum1->Clear();
