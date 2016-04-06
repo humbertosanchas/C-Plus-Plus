@@ -10,6 +10,7 @@ namespace FormTemplate {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Windows::Forms;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -158,6 +159,7 @@ namespace FormTemplate {
 			this->btnTopLeft->Size = System::Drawing::Size(75, 75);
 			this->btnTopLeft->TabIndex = 0;
 			this->btnTopLeft->UseVisualStyleBackColor = false;
+			this->btnTopLeft->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnTopMiddle
 			// 
@@ -168,6 +170,7 @@ namespace FormTemplate {
 			this->btnTopMiddle->Size = System::Drawing::Size(85, 75);
 			this->btnTopMiddle->TabIndex = 1;
 			this->btnTopMiddle->UseVisualStyleBackColor = false;
+			this->btnTopMiddle->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnTopRight
 			// 
@@ -178,6 +181,7 @@ namespace FormTemplate {
 			this->btnTopRight->Size = System::Drawing::Size(86, 75);
 			this->btnTopRight->TabIndex = 2;
 			this->btnTopRight->UseVisualStyleBackColor = false;
+			this->btnTopRight->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnMidLeft
 			// 
@@ -188,6 +192,7 @@ namespace FormTemplate {
 			this->btnMidLeft->Size = System::Drawing::Size(75, 84);
 			this->btnMidLeft->TabIndex = 3;
 			this->btnMidLeft->UseVisualStyleBackColor = false;
+			this->btnMidLeft->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnMidMid
 			// 
@@ -197,6 +202,7 @@ namespace FormTemplate {
 			this->btnMidMid->Size = System::Drawing::Size(85, 84);
 			this->btnMidMid->TabIndex = 4;
 			this->btnMidMid->UseVisualStyleBackColor = false;
+			this->btnMidMid->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnMidRight
 			// 
@@ -207,6 +213,7 @@ namespace FormTemplate {
 			this->btnMidRight->Size = System::Drawing::Size(86, 84);
 			this->btnMidRight->TabIndex = 5;
 			this->btnMidRight->UseVisualStyleBackColor = false;
+			this->btnMidRight->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnBotLeft
 			// 
@@ -217,6 +224,7 @@ namespace FormTemplate {
 			this->btnBotLeft->Size = System::Drawing::Size(75, 79);
 			this->btnBotLeft->TabIndex = 6;
 			this->btnBotLeft->UseVisualStyleBackColor = false;
+			this->btnBotLeft->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnBotMid
 			// 
@@ -227,6 +235,7 @@ namespace FormTemplate {
 			this->btnBotMid->Size = System::Drawing::Size(85, 79);
 			this->btnBotMid->TabIndex = 7;
 			this->btnBotMid->UseVisualStyleBackColor = false;
+			this->btnBotMid->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// btnBotRight
 			// 
@@ -237,6 +246,7 @@ namespace FormTemplate {
 			this->btnBotRight->Size = System::Drawing::Size(86, 79);
 			this->btnBotRight->TabIndex = 8;
 			this->btnBotRight->UseVisualStyleBackColor = false;
+			this->btnBotRight->Click += gcnew System::EventHandler(this, &MyForm::btnGrid_Click);
 			// 
 			// mnuTop
 			// 
@@ -396,6 +406,7 @@ namespace FormTemplate {
 			this->btnPlayAgain->TabIndex = 10;
 			this->btnPlayAgain->Text = L"Play Again";
 			this->btnPlayAgain->UseVisualStyleBackColor = true;
+			this->btnPlayAgain->Click += gcnew System::EventHandler(this, &MyForm::btnPlayAgain_Click);
 			// 
 			// btnExit
 			// 
@@ -462,17 +473,55 @@ namespace FormTemplate {
 
 		}
 #pragma endregion
+
+		bool gameOver = false;
+		bool isXsTurn = true;
+
 	private: System::Void btnExit_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->Close();
 	}
 private: System::Void instructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-	
-	Instructions ^instructions = gcnew Instructions();
-	instructions->Show();
+	//
+	//Instructions ^instructions = gcnew Instructions();
+	//instructions->Show();
 }
 private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	Credits ^credis = gcnew Credits();
 	credis->Show();
+}
+private: System::Void btnGrid_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	Button^ buttonClicked;
+	buttonClicked = safe_cast<Button^>(sender);
+	if (!gameOver)
+	{
+		if (buttonClicked->Text == "")
+		{
+			if (isXsTurn)
+			{
+				buttonClicked->Text = "X";
+				tslCurrentPlayer->Text = "O";
+				isXsTurn = false;
+			}
+			else
+			{
+				buttonClicked->Text = "O";
+				tslCurrentPlayer->Text = "X";
+				isXsTurn = true;
+			}
+		}
+	}
+
+
+}
+private: System::Void btnPlayAgain_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+
+}
+
+private: void IntiatizesBoard()
+{
+		
 }
 };
 }
