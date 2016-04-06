@@ -24,6 +24,7 @@ namespace FormTemplate {
 			//
 			//TODO: Add the constructor code here
 			//
+			
 		}
 
 	protected:
@@ -89,6 +90,7 @@ namespace FormTemplate {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+	
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -481,9 +483,9 @@ namespace FormTemplate {
 		this->Close();
 	}
 private: System::Void instructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-	//
-	//Instructions ^instructions = gcnew Instructions();
-	//instructions->Show();
+	
+	Instructions ^instructions = gcnew Instructions();
+	instructions->Show();
 }
 private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	Credits ^credis = gcnew Credits();
@@ -519,9 +521,10 @@ private: System::Void btnPlayAgain_Click(System::Object^  sender, System::EventA
 
 }
 
-private: void IntiatizesBoard()
-{
-		
+private: System::Void IntiatizesBoard(void)
+{	
+	
 }
+
 };
 }
