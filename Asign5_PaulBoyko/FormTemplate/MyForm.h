@@ -595,35 +595,35 @@ private:  System::Void CheckForWinner()
 {
 	if (btnTopLeft->Text == "X" && btnTopMiddle->Text == "X" && btnTopRight->Text == "X" || btnTopLeft->Text == "O" && btnTopMiddle->Text == "O" && btnTopRight->Text == "O")
 	{
-		AndTheWinnerIs(btnTopLeft);		
+		AndTheWinnerIs(btnTopLeft, btnTopMiddle, btnTopRight);
 	}
 	else if (btnMidLeft->Text == "X" && btnMidMid->Text == "X" && btnMidRight->Text == "X" || btnMidLeft->Text == "O" && btnMidMid->Text == "O" && btnMidRight->Text == "O")
 	{
-		AndTheWinnerIs(btnMidLeft);		
+		AndTheWinnerIs(btnMidLeft, btnMidMid, btnMidRight);
 	}
 	else if (btnBotLeft->Text == "X" && btnBotMid->Text == "X" && btnBotRight->Text == "X" || btnBotLeft->Text == "O" && btnBotMid->Text == "O" && btnBotRight->Text == "O")
 	{
-		AndTheWinnerIs(btnBotLeft);
+		AndTheWinnerIs(btnBotLeft, btnBotMid, btnBotRight);
 	}
 	else if (btnTopLeft->Text == "X" && btnMidLeft->Text == "X" && btnBotLeft->Text == "X" || btnTopLeft->Text == "O" && btnMidLeft->Text == "O" && btnBotLeft->Text == "O")
 	{
-		AndTheWinnerIs(btnTopLeft);
+		AndTheWinnerIs(btnTopLeft, btnMidLeft, btnBotLeft);
 	}
 	else if (btnTopMiddle->Text == "X" && btnMidMid->Text == "X" && btnBotMid->Text == "X" || btnTopMiddle->Text == "O" && btnMidMid->Text == "O" && btnBotMid->Text == "O")
 	{
-		AndTheWinnerIs(btnTopMiddle);
+		AndTheWinnerIs(btnTopMiddle, btnMidMid, btnBotMid);
 	}
 	else if (btnTopRight->Text == "X" && btnMidRight->Text == "X" && btnBotRight->Text == "X" || btnTopRight->Text == "O" && btnMidRight->Text == "O" && btnBotRight->Text == "O")
 	{
-		AndTheWinnerIs(btnTopRight);
+		AndTheWinnerIs(btnTopRight, btnMidRight, btnBotRight);
 	}
 	else if (btnTopLeft->Text == "X" && btnMidMid->Text == "X" && btnBotRight->Text == "X" || btnTopLeft->Text == "O" && btnMidMid->Text == "O" && btnBotRight->Text == "O")
 	{
-		AndTheWinnerIs(btnTopLeft);
+		AndTheWinnerIs(btnTopLeft, btnMidMid, btnBotRight);
 	}
 	else if (btnBotLeft->Text == "X" && btnMidMid->Text == "X" && btnTopRight->Text == "X" || btnBotLeft->Text == "O" && btnMidMid->Text == "O" && btnTopRight->Text == "O")
 	{		
-		AndTheWinnerIs(btnBotLeft);
+		AndTheWinnerIs(btnBotLeft, btnMidMid, btnTopRight );
 	}
 	else if (playCounter == 9)
 	{
@@ -637,11 +637,14 @@ private:  System::Void CheckForWinner()
 	}
 }
 
-private: System::Void AndTheWinnerIs(Button^ btn)
+private: System::Void AndTheWinnerIs(Button^ btn, Button^ btn2, Button^ btn3)
 {
 	String^ winner = btn->Text;
 	tslCurrentPlayer->Text = winner;
 	tslCurrentPlayersItYourTurn_OrYouWon->Text = " is the winner";
+	btn->BackColor = System::Drawing::Color::Green;
+	btn2->BackColor = System::Drawing::Color::Green;
+	btn3->BackColor = System::Drawing::Color::Green;	
 	MessageBox::Show(winner + " is the WINNER!!", "The WINNER is");
 	gameOver = true;
 	if (btn->Text == "X")
@@ -654,7 +657,11 @@ private: System::Void AndTheWinnerIs(Button^ btn)
 		numOfOWins++;		
 		lblNumWinsOResult->Text = numOfOWins.ToString();		
 	}
+	btn->BackColor = System::Drawing::Color::White;
+	btn2->BackColor = System::Drawing::Color::White;
+	btn3->BackColor = System::Drawing::Color::White;
 	this->IntiatizesBoard();
+	
 }
 
 private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
