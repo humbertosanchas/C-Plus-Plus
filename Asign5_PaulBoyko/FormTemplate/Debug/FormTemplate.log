@@ -1,16 +1,16 @@
-﻿Build started 4/6/2016 11:23:58 AM.
-     1>Project "C:\Users\Administrator\Source\Repos\C-Plus-Plus\Asign5_PaulBoyko\FormTemplate\FormTemplate.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/6/2016 11:06:06 PM.
+     1>Project "C:\Users\Humberto\Documents\Repos\C-Plus-Plus\Asign5_PaulBoyko\FormTemplate\FormTemplate.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
          MyForm.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Source\Repos\C-Plus-Plus\Asign5_PaulBoyko\Debug\FormTemplate.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\FormTemplate.Credits.resources /ASSEMBLYRESOURCE:Debug\FormTemplate.MyForm.resources /ASSEMBLYRESOURCE:Debug\FormTemplate.Instructions.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Administrator\Source\Repos\C-Plus-Plus\Asign5_PaulBoyko\Debug\FormTemplate.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"Main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Credits.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Humberto\Documents\Repos\C-Plus-Plus\Asign5_PaulBoyko\Debug\FormTemplate.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\FormTemplate.Credits.resources /ASSEMBLYRESOURCE:Debug\FormTemplate.MyForm.resources /ASSEMBLYRESOURCE:Debug\FormTemplate.Instructions.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Humberto\Documents\Repos\C-Plus-Plus\Asign5_PaulBoyko\Debug\FormTemplate.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"Main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Credits.obj
          Debug\MyForm.obj
          Debug\Instructions.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
-         FormTemplate.vcxproj -> C:\Users\Administrator\Source\Repos\C-Plus-Plus\Asign5_PaulBoyko\Debug\FormTemplate.exe
-     1>Done Building Project "C:\Users\Administrator\Source\Repos\C-Plus-Plus\Asign5_PaulBoyko\FormTemplate\FormTemplate.vcxproj" (Build target(s)).
+         FormTemplate.vcxproj -> C:\Users\Humberto\Documents\Repos\C-Plus-Plus\Asign5_PaulBoyko\Debug\FormTemplate.exe
+     1>Done Building Project "C:\Users\Humberto\Documents\Repos\C-Plus-Plus\Asign5_PaulBoyko\FormTemplate\FormTemplate.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.23
+Time Elapsed 00:00:00.97

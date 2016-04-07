@@ -23,7 +23,10 @@ namespace FormTemplate {
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
-			//
+			//	
+			this->IntiatizesBoard();
+			
+			
 			
 		}
 
@@ -155,6 +158,8 @@ namespace FormTemplate {
 			// btnTopLeft
 			// 
 			this->btnTopLeft->BackColor = System::Drawing::Color::White;
+			this->btnTopLeft->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnTopLeft->Location = System::Drawing::Point(0, 0);
 			this->btnTopLeft->Margin = System::Windows::Forms::Padding(0, 0, 3, 3);
 			this->btnTopLeft->Name = L"btnTopLeft";
@@ -166,6 +171,8 @@ namespace FormTemplate {
 			// btnTopMiddle
 			// 
 			this->btnTopMiddle->BackColor = System::Drawing::Color::White;
+			this->btnTopMiddle->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnTopMiddle->Location = System::Drawing::Point(81, 0);
 			this->btnTopMiddle->Margin = System::Windows::Forms::Padding(3, 0, 3, 3);
 			this->btnTopMiddle->Name = L"btnTopMiddle";
@@ -177,6 +184,8 @@ namespace FormTemplate {
 			// btnTopRight
 			// 
 			this->btnTopRight->BackColor = System::Drawing::Color::White;
+			this->btnTopRight->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnTopRight->Location = System::Drawing::Point(172, 0);
 			this->btnTopRight->Margin = System::Windows::Forms::Padding(3, 0, 0, 3);
 			this->btnTopRight->Name = L"btnTopRight";
@@ -188,6 +197,8 @@ namespace FormTemplate {
 			// btnMidLeft
 			// 
 			this->btnMidLeft->BackColor = System::Drawing::Color::White;
+			this->btnMidLeft->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnMidLeft->Location = System::Drawing::Point(0, 81);
 			this->btnMidLeft->Margin = System::Windows::Forms::Padding(0, 3, 3, 3);
 			this->btnMidLeft->Name = L"btnMidLeft";
@@ -199,6 +210,8 @@ namespace FormTemplate {
 			// btnMidMid
 			// 
 			this->btnMidMid->BackColor = System::Drawing::Color::White;
+			this->btnMidMid->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnMidMid->Location = System::Drawing::Point(81, 81);
 			this->btnMidMid->Name = L"btnMidMid";
 			this->btnMidMid->Size = System::Drawing::Size(85, 84);
@@ -209,6 +222,8 @@ namespace FormTemplate {
 			// btnMidRight
 			// 
 			this->btnMidRight->BackColor = System::Drawing::Color::White;
+			this->btnMidRight->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnMidRight->Location = System::Drawing::Point(172, 81);
 			this->btnMidRight->Margin = System::Windows::Forms::Padding(3, 3, 0, 3);
 			this->btnMidRight->Name = L"btnMidRight";
@@ -220,6 +235,8 @@ namespace FormTemplate {
 			// btnBotLeft
 			// 
 			this->btnBotLeft->BackColor = System::Drawing::Color::White;
+			this->btnBotLeft->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnBotLeft->Location = System::Drawing::Point(0, 171);
 			this->btnBotLeft->Margin = System::Windows::Forms::Padding(0, 3, 3, 0);
 			this->btnBotLeft->Name = L"btnBotLeft";
@@ -231,6 +248,8 @@ namespace FormTemplate {
 			// btnBotMid
 			// 
 			this->btnBotMid->BackColor = System::Drawing::Color::White;
+			this->btnBotMid->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnBotMid->Location = System::Drawing::Point(81, 171);
 			this->btnBotMid->Margin = System::Windows::Forms::Padding(3, 3, 3, 0);
 			this->btnBotMid->Name = L"btnBotMid";
@@ -242,6 +261,8 @@ namespace FormTemplate {
 			// btnBotRight
 			// 
 			this->btnBotRight->BackColor = System::Drawing::Color::White;
+			this->btnBotRight->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btnBotRight->Location = System::Drawing::Point(172, 171);
 			this->btnBotRight->Margin = System::Windows::Forms::Padding(3, 3, 0, 0);
 			this->btnBotRight->Name = L"btnBotRight";
@@ -275,14 +296,16 @@ namespace FormTemplate {
 			// newGameToolStripMenuItem
 			// 
 			this->newGameToolStripMenuItem->Name = L"newGameToolStripMenuItem";
-			this->newGameToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->newGameToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->newGameToolStripMenuItem->Text = L"&New Game";
+			this->newGameToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newGameToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->exitToolStripMenuItem->Text = L"&Exit";
+			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ExitGame);
 			// 
 			// aboutToolStripMenuItem
 			// 
@@ -297,14 +320,14 @@ namespace FormTemplate {
 			// instructionsToolStripMenuItem
 			// 
 			this->instructionsToolStripMenuItem->Name = L"instructionsToolStripMenuItem";
-			this->instructionsToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->instructionsToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->instructionsToolStripMenuItem->Text = L"&Instructions";
 			this->instructionsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::instructionsToolStripMenuItem_Click);
 			// 
 			// creditsToolStripMenuItem
 			// 
 			this->creditsToolStripMenuItem->Name = L"creditsToolStripMenuItem";
-			this->creditsToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->creditsToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->creditsToolStripMenuItem->Text = L"&Credits";
 			this->creditsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::creditsToolStripMenuItem_Click);
 			// 
@@ -420,7 +443,7 @@ namespace FormTemplate {
 			this->btnExit->TabIndex = 11;
 			this->btnExit->Text = L"Exit";
 			this->btnExit->UseVisualStyleBackColor = true;
-			this->btnExit->Click += gcnew System::EventHandler(this, &MyForm::btnExit_Click);
+			this->btnExit->Click += gcnew System::EventHandler(this, &MyForm::ExitGame);
 			// 
 			// lblNumOfTiesLbl
 			// 
@@ -478,23 +501,39 @@ namespace FormTemplate {
 
 		bool gameOver = false;
 		bool isXsTurn = true;
+		int playCounter = 0;		
+		int numOfXWins = 0;
+		int numOfOWins = 0;
+		int numOfTies = 0;
+		int totalNum = 0;
 
-	private: System::Void btnExit_Click(System::Object^  sender, System::EventArgs^  e) {
+
+
+private: System::Void ExitGame(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (MessageBox::Show("Do you wish to EXIT this game", "Are you sure", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+	{
 		this->Close();
-	}
-private: System::Void instructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-	
+	}		
+}
+
+private: System::Void instructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+{	
 	Instructions ^instructions = gcnew Instructions();
 	instructions->Show();
 }
-private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+
+private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+{
 	Credits ^credis = gcnew Credits();
 	credis->Show();
 }
+
 private: System::Void btnGrid_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	Button^ buttonClicked;
 	buttonClicked = safe_cast<Button^>(sender);
+	
 	if (!gameOver)
 	{
 		if (buttonClicked->Text == "")
@@ -504,26 +543,134 @@ private: System::Void btnGrid_Click(System::Object^  sender, System::EventArgs^ 
 				buttonClicked->Text = "X";
 				tslCurrentPlayer->Text = "O";
 				isXsTurn = false;
+				playCounter++;
 			}
 			else
 			{
 				buttonClicked->Text = "O";
 				tslCurrentPlayer->Text = "X";
 				isXsTurn = true;
+				playCounter++;
 			}
 		}
 	}
-
-
+	this->CheckForWinner();
 }
 private: System::Void btnPlayAgain_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-
+	if (playCounter >= 0 && playCounter < 9)
+	{
+		if (MessageBox::Show("Game is not completed do you wish to quit and start a new one", "Game not complete", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+		{
+			this->IntiatizesBoard();
+		}
+	}
+	else
+	{
+		this->IntiatizesBoard();
+	}
 }
 
 private: System::Void IntiatizesBoard(void)
 {	
-	
+	btnTopLeft->Text = "";
+	btnTopMiddle->Text = "";
+	btnTopRight->Text = "";
+	btnMidLeft->Text = "";
+	btnMidMid->Text = "";
+	btnMidRight->Text = "";
+	btnBotLeft->Text = "";
+	btnBotMid->Text = "";
+	btnBotRight->Text = "";
+	isXsTurn = true;
+	gameOver = false;
+	playCounter = 0;
+	tslCurrentPlayer->Text = "X";
+	tslCurrentPlayersItYourTurn_OrYouWon->Text = " its your turn";
+	totalNum++;
+	lblNumGamePlayedResult->Text = totalNum.ToString();
+}
+
+private:  System::Void CheckForWinner()
+{
+	if (btnTopLeft->Text == "X" && btnTopMiddle->Text == "X" && btnTopRight->Text == "X" || btnTopLeft->Text == "O" && btnTopMiddle->Text == "O" && btnTopRight->Text == "O")
+	{
+		AndTheWinnerIs(btnTopLeft);		
+	}
+	else if (btnMidLeft->Text == "X" && btnMidMid->Text == "X" && btnMidRight->Text == "X" || btnMidLeft->Text == "O" && btnMidMid->Text == "O" && btnMidRight->Text == "O")
+	{
+		AndTheWinnerIs(btnMidLeft);		
+	}
+	else if (btnBotLeft->Text == "X" && btnBotMid->Text == "X" && btnBotRight->Text == "X" || btnBotLeft->Text == "O" && btnBotMid->Text == "O" && btnBotRight->Text == "O")
+	{
+		AndTheWinnerIs(btnBotLeft);
+	}
+	else if (btnTopLeft->Text == "X" && btnMidLeft->Text == "X" && btnBotLeft->Text == "X" || btnTopLeft->Text == "O" && btnMidLeft->Text == "O" && btnBotLeft->Text == "O")
+	{
+		AndTheWinnerIs(btnTopLeft);
+	}
+	else if (btnTopMiddle->Text == "X" && btnMidMid->Text == "X" && btnBotMid->Text == "X" || btnTopMiddle->Text == "O" && btnMidMid->Text == "O" && btnBotMid->Text == "O")
+	{
+		AndTheWinnerIs(btnTopMiddle);
+	}
+	else if (btnTopRight->Text == "X" && btnMidRight->Text == "X" && btnBotRight->Text == "X" || btnTopRight->Text == "O" && btnMidRight->Text == "O" && btnBotRight->Text == "O")
+	{
+		AndTheWinnerIs(btnTopRight);
+	}
+	else if (btnTopLeft->Text == "X" && btnMidMid->Text == "X" && btnBotRight->Text == "X" || btnTopLeft->Text == "O" && btnMidMid->Text == "O" && btnBotRight->Text == "O")
+	{
+		AndTheWinnerIs(btnTopLeft);
+	}
+	else if (btnBotLeft->Text == "X" && btnMidMid->Text == "X" && btnTopRight->Text == "X" || btnBotLeft->Text == "O" && btnMidMid->Text == "O" && btnTopRight->Text == "O")
+	{		
+		AndTheWinnerIs(btnBotLeft);
+	}
+	else if (playCounter == 9)
+	{
+		tslCurrentPlayer->Text = "";
+		tslCurrentPlayersItYourTurn_OrYouWon->Text = " It is a tie";
+		MessageBox::Show("its a tie", "The WINNER is");
+		numOfTies++;		
+		lblNumOfTiesResult->Text = numOfTies.ToString();		
+		gameOver = true;
+		this->IntiatizesBoard();
+	}
+}
+
+private: System::Void AndTheWinnerIs(Button^ btn)
+{
+	String^ winner = btn->Text;
+	tslCurrentPlayer->Text = winner;
+	tslCurrentPlayersItYourTurn_OrYouWon->Text = " is the winner";
+	MessageBox::Show(winner + " is the WINNER!!", "The WINNER is");
+	gameOver = true;
+	if (btn->Text == "X")
+	{
+		numOfXWins++;		
+		lblWinsXResult->Text = numOfXWins.ToString();		
+	}
+	else
+	{
+		numOfOWins++;		
+		lblNumWinsOResult->Text = numOfOWins.ToString();		
+	}
+	this->IntiatizesBoard();
+}
+
+private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+{	
+	if (MessageBox::Show("This action will reset all scores are you sure you wish to continue", "New Game", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+	{
+		playCounter = 0;
+		numOfXWins = 0;
+		numOfOWins = 0;
+		numOfTies = 0;
+		totalNum = 0;
+		this->IntiatizesBoard();		
+		lblWinsXResult->Text = "0";
+		lblNumWinsOResult->Text = "0";
+		lblNumOfTiesResult->Text = "0";
+	}	
 }
 
 };
