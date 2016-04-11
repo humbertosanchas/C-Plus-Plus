@@ -1,5 +1,7 @@
 #pragma once
 
+//Paul Boyko April 2016
+
 namespace FormTemplate {
 
 	using namespace System;
@@ -92,7 +94,7 @@ namespace FormTemplate {
 		}
 #pragma endregion
 	private: System::Void btnExitInstructions_Click(System::Object^  sender, System::EventArgs^  e) {
-
+		//close the instruction form when exit btn clicked
 		this->Close();
 	}
 	};

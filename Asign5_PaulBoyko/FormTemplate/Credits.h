@@ -1,5 +1,7 @@
 #pragma once
 
+//Paul Boyko April 2016
+
 namespace FormTemplate {
 
 	using namespace System;
@@ -121,7 +123,6 @@ namespace FormTemplate {
 			this->lblCreditsDesignLbl->Size = System::Drawing::Size(88, 18);
 			this->lblCreditsDesignLbl->TabIndex = 4;
 			this->lblCreditsDesignLbl->Text = L"Design  :  ";
-			this->lblCreditsDesignLbl->Click += gcnew System::EventHandler(this, &Credits::lblCreditsDesignLbl_Click);
 			// 
 			// lblCreditDesignResult
 			// 
@@ -133,7 +134,6 @@ namespace FormTemplate {
 			this->lblCreditDesignResult->Size = System::Drawing::Size(93, 18);
 			this->lblCreditDesignResult->TabIndex = 5;
 			this->lblCreditDesignResult->Text = L"Paul Boyko";
-			this->lblCreditDesignResult->Click += gcnew System::EventHandler(this, &Credits::lblCreditDesignResult_Click);
 			// 
 			// lblCreditDateMade
 			// 
@@ -177,9 +177,7 @@ namespace FormTemplate {
 
 		}
 #pragma endregion
-	private: System::Void lblCreditsDesignLbl_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-private: System::Void lblCreditDesignResult_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
+
+
 };
 }

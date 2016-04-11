@@ -2,6 +2,8 @@
 #include "Instructions.h"
 #include "Credits.h"
 
+//Paul Boyko April 2016
+
 namespace FormTemplate {
 
 	using namespace System;
@@ -499,6 +501,7 @@ namespace FormTemplate {
 		}
 #pragma endregion
 
+		//data members which allow the game/form to track changes and work properly
 		bool gameOver = false;
 		bool isXsTurn = true;
 		int playCounter = 0;		
@@ -511,26 +514,31 @@ namespace FormTemplate {
 
 private: System::Void ExitGame(System::Object^  sender, System::EventArgs^  e) 
 {
+	//warning message confirming that they wish to quit the game
 	if (MessageBox::Show("Do you wish to EXIT this game", "Are you sure", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
 	{
+		//close the form/game
 		this->Close();
 	}		
 }
 
 private: System::Void instructionsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
 {	
+	//create an instance of the instructions form and Show that instance
 	Instructions ^instructions = gcnew Instructions();
 	instructions->Show();
 }
 
 private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
 {
+	//create a instance of the Credits form and Show that instance
 	Credits ^credis = gcnew Credits();
 	credis->Show();
 }
 
 private: System::Void btnGrid_Click(System::Object^  sender, System::EventArgs^  e) {
 
+	//when button clicked get that button check ho's turn it is give the clicked button text prop the value of the current player, change the current play to the other one and increment number of current move played in the game 
 	Button^ buttonClicked;
 	buttonClicked = safe_cast<Button^>(sender);
 	
@@ -554,18 +562,22 @@ private: System::Void btnGrid_Click(System::Object^  sender, System::EventArgs^ 
 			}
 		}
 	}
+	//check if the last move created a winner or tie state
 	this->CheckForWinner();
 }
 private: System::Void btnPlayAgain_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-	if (playCounter >= 0 && playCounter < 9)
+	//if game is not complete warn them if they wish to restart allow it and count that game as a tie since no one won
+	if (playCounter >= 0 && playCounter < 9 && !gameOver)
 	{
 		if (MessageBox::Show("Game is not completed do you wish to quit and start a new one", "Game not complete", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
 		{
+			numOfTies++;
+			lblNumOfTiesResult->Text = numOfTies.ToString();
 			this->IntiatizesBoard();
 		}
 	}
-	else
+	else // if game is compelte allow them to start a new game
 	{
 		this->IntiatizesBoard();
 	}
@@ -573,6 +585,7 @@ private: System::Void btnPlayAgain_Click(System::Object^  sender, System::EventA
 
 private: System::Void IntiatizesBoard(void)
 {	
+	//make sure board is fresh and ready to start.. all button cleared, p;ayer set to 'x's turn, gameOver false and playCount set to zero (number of moves in game so far) and count current game for stats and display  it
 	btnTopLeft->Text = "";
 	btnTopMiddle->Text = "";
 	btnTopRight->Text = "";
@@ -593,6 +606,7 @@ private: System::Void IntiatizesBoard(void)
 
 private:  System::Void CheckForWinner()
 {
+	//Check for 3 'X' or 'O' vert, hor or diag or if board is full with no winner (tie) if winner pass to AndTheWinnerIs to determine winner if tie show that it is a tie
 	if (btnTopLeft->Text == "X" && btnTopMiddle->Text == "X" && btnTopRight->Text == "X" || btnTopLeft->Text == "O" && btnTopMiddle->Text == "O" && btnTopRight->Text == "O")
 	{
 		AndTheWinnerIs(btnTopLeft, btnTopMiddle, btnTopRight);
@@ -639,6 +653,7 @@ private:  System::Void CheckForWinner()
 
 private: System::Void AndTheWinnerIs(Button^ btn, Button^ btn2, Button^ btn3)
 {
+	//determine the winners letter value change winning buttons background colour update status bars winner value and message box winner value also once okay is selected reset btn colour to white and init board
 	String^ winner = btn->Text;
 	tslCurrentPlayer->Text = winner;
 	tslCurrentPlayersItYourTurn_OrYouWon->Text = " is the winner";
@@ -666,6 +681,7 @@ private: System::Void AndTheWinnerIs(Button^ btn, Button^ btn2, Button^ btn3)
 
 private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
 {	
+	//warning message about clearing all accumulated stats if they still wanna continue allow them too if not continue game with no changes 
 	if (MessageBox::Show("This action will reset all scores are you sure you wish to continue", "New Game", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
 	{
 		playCounter = 0;
