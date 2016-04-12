@@ -533,7 +533,7 @@ private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, Sy
 {
 	//create a instance of the Credits form and Show that instance
 	Credits ^credis = gcnew Credits();
-	credis->Show();
+	credis->ShowDialog();
 }
 
 private: System::Void btnGrid_Click(System::Object^  sender, System::EventArgs^  e) {

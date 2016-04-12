@@ -23,6 +23,7 @@ namespace FormTemplate {
 			//
 			//TODO: Add the constructor code here
 			//
+			
 		}
 
 	protected:
